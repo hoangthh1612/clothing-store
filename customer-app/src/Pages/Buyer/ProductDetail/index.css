@@ -1,0 +1,4 @@
+/* override slider library */
+.slick-list {
+  margin: 0;
+}

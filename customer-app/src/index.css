@@ -1,0 +1,461 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+:root {
+  --primary-color: #317eeb;
+}
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: 'transparent';
+  /* #212032; */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1178f880;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1178f8;
+}
+
+#product-container::-webkit-scrollbar {
+  display: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+div .button {
+  margin: 0 15px 15px 0;
+}
+.video-contain video {
+  object-fit: contain;
+  overflow: hidden;
+}
+textarea:focus {
+  outline: none;
+  border-color: none;
+  box-shadow: none;
+}
+
+input:focus-visible {
+  outline: none;
+  border-color: none;
+  box-shadow: none;
+}
+
+.video-cover video {
+  position: absolute;
+  object-fit: cover;
+}
+
+input[type='radio']:checked + label span {
+  background-color: #fff;
+  box-shadow: 0px 0px 0px 2px black inset;
+}
+
+input[type='radio']:checked + label {
+  color: #fff;
+}
+
+/* button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  background-color: #1677ff;
+  background-image: none;
+} */
+
+.flying-emojis {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  z-index: 99;
+}
+.emoji {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  font-size: 48px;
+  line-height: 1;
+  width: 48px;
+  height: 48px;
+}
+.emoji.wiggle-1 {
+  animation: emerge 3s forwards, wiggle-1 1s ease-in-out infinite alternate;
+}
+.emoji.wiggle-2 {
+  animation: emerge 3s forwards, wiggle-2 1s ease-in-out infinite alternate;
+}
+.ant-btn-primary {
+  background-color: #1677ff !important;
+}
+@keyframes emerge {
+  to {
+    bottom: 85%;
+    opacity: 0;
+  }
+}
+@keyframes wiggle-1 {
+  from {
+    margin-left: -50px;
+  }
+  to {
+    margin-left: 50px;
+  }
+}
+@keyframes wiggle-2 {
+  from {
+    margin-left: 50px;
+  }
+  to {
+    margin-left: -50px;
+  }
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.28);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 30px;
+  height: 35px;
+  line-height: 30px;
+  position: absolute;
+  top: 25%;
+  -webkit-transform: translate(0, -50%);
+  cursor: pointer;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  width: 35px;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 2%;
+}
+
+.carousel-control.next {
+  right: 2%;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+
+.ant-carousel .slick-prev,
+.ant-carousel .slick-next,
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover {
+  font-size: 30px;
+  color: currentColor;
+}
+
+.ant-carousel .slick-prev,
+.ant-carousel .slick-prev:focus,
+.ant-carousel .slick-prev:hover {
+  left: 10px;
+  z-index: 2;
+  color: pink;
+}
+
+.ant-carousel .slick-next,
+.ant-carousel .slick-next:focus,
+.ant-carousel .slick-next:hover {
+  right: 10px;
+  z-index: 2;
+  color: pink;
+}
+
+/* // modify css react slick */
+.slick-prev {
+  left: 3% !important;
+  z-index: 999;
+  height: 70px;
+  width: 30px;
+  line-height: 90px;
+  text-align: center;
+  /* border: 1px solid #ddd; */
+}
+
+.slick-next {
+  right: 3% !important;
+  z-index: 999;
+  height: 70px;
+  width: 30px;
+  line-height: 90px;
+  text-align: center;
+  /* border: 1px solid #ddd; */
+}
+
+.slick-prev::before,
+.slick-next::before {
+  color: #d5d5d5 !important;
+  font-size: 40px !important;
+}
+
+:fullscreen .just-show-in-fullscreen {
+  display: block !important;
+}
+:fullscreen .hide-in-fullscreen {
+  display: none !important;
+}
+:fullscreen #player-viewer {
+  border-radius: 0;
+}
+:fullscreen .slick-prev {
+  top: 0 !important;
+  left: 50% !important;
+  z-index: 999;
+  height: 70px;
+  width: 30px;
+  line-height: 90px;
+  text-align: center;
+  /* border: 1px solid red; */
+  transform: rotate(90deg) !important;
+}
+:fullscreen .slick-next {
+  bottom: 0 !important;
+  left: 50%;
+  z-index: 999;
+  height: 70px;
+  width: 30px;
+  line-height: 90px;
+  text-align: center;
+  /* border: 1px solid #ddd; */
+  top: unset;
+  transform: rotate(90deg) !important;
+}
+
+:fullscreen .slick-prev::before,
+:fullscreen .slick-next::before {
+  color: #d5d5d5 !important;
+  font-size: 40px !important;
+}
+:fullscreen .slick-slider {
+  /* position: fixed !important; */
+  background-color: rgba(255, 255, 255, 0.7);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  top: 0;
+
+  min-width: 390px;
+  width: 20%;
+  /* height: calc(100vh - 100px) !important; */
+}
+:fullscreen .slick-list {
+  /* height: calc(100vh - 100px) !important; */
+}
+:fullscreen .testss {
+  position: fixed !important;
+  /* min-width: 390px;
+  width: 20%;
+  background-color: rgb(52, 51, 51);
+  margin: 1rem;
+  z-index: 9;
+  top: 0; */
+  top: 0;
+  flex-direction: column;
+  margin: 1rem;
+  /* background-color: rgba(255, 255, 255, 0.7); */
+  margin-top: 3rem;
+}
+:fullscreen .testss > div:first-child {
+  background-color: rgba(255, 255, 255, 0.7);
+  min-width: 390px;
+  width: 20%;
+  border-radius: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /* border: solid 2px #c21e56; */
+}
+.testss > div:first-child {
+  border: solid 2px #c21e56;
+  border-radius: 10px;
+}
+
+.snkk1 {
+  background-color: rgb(217, 217, 217);
+  color: blue;
+  display: block;
+}
+
+.snkk2 {
+  background-color: rgb(217, 217, 217);
+  /* width: 100%; */
+  /* display: block;
+  float:left;  */
+}
+.snkk0 {
+  float: left;
+  width: 20%;
+  display: block;
+}
+
+.snkk3 {
+  /* display: inline-block; */
+  /* display: block; */
+  /* display: inline-block; */
+  background-color: rgb(217, 217, 217);
+  /* width: 150%;
+  color: #0000ff; */
+  /* height: 10%; 
+  width: 50%; */
+  /* margin-left: 10%;  */
+  /* margin-right: 70%; */
+  /* margin-bottom: 5%;  */
+  /* margin-top: 0%; */
+}
+.snkk5 {
+  /* background-color: rgb(0, 204, 255);
+  width: 50%;
+  /* height: 1%; */
+  /* height: 20px; 
+  margin-left: 12%;
+  margin-bottom: 20%;  */
+  /* width: 150%; */
+}
+
+.snkk6 {
+  background-color: rgb(217, 217, 217);
+  /*
+  padding-top: 100px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  padding-left: 400px; */
+  /* height: 40%;
+  width: 40%;
+  margin-left: 50%; */
+  float: left;
+  display: block;
+  width: 33%;
+  height: 400px;
+  /* width: 500px; */
+  /* display: inline-block; */
+  /* height: 400px; */
+  /* font-size: 100%; */
+}
+
+.chatvsmh {
+}
+.chat {
+  /* display: inline-block; */
+  width: 50%;
+  background-color: rgb(217, 217, 217);
+}
+.mh {
+  /* width: 30%; */
+}
+.snkk7 {
+  /* width: 30%; */
+  /* display: inline-block; */
+  float: left;
+  display: block;
+  width: 33%;
+}
+.snkk8 {
+  /* float:right; */
+  /* width: 33%;
+  display: inline-block; */
+  background-color: rgb(217, 217, 217);
+  width: 34%;
+  height: 400px;
+  float: left;
+  display: block;
+}
+.snkk678 {
+  /* display: inline-block; */
+  /* display: block; */
+}
+
+.viewchart {
+  background-color: rgb(217, 217, 217);
+}
+.bottom_1 {
+  float: left;
+  margin-right: 50%;
+}
+
+.site-layout-content {
+  width: 100%;
+  height: 100%;
+}
+
+.seller-layout {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.side-content {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.05);
+}

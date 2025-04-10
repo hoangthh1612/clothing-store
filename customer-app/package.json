@@ -1,0 +1,87 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/compatible": "^5.1.1",
+    "@ant-design/icons": "^5.2.6",
+    "@chatscope/chat-ui-kit-react": "^1.10.1",
+    "@chatscope/chat-ui-kit-styles": "^1.4.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^1.0.6",
+    "@hookform/resolvers": "^3.3.2",
+    "@mui/icons-material": "^5.14.18",
+    "@mui/material": "^5.14.18",
+    "@popperjs/core": "^2.11.8",
+    "@reduxjs/toolkit": "^2.0.1",
+    "@tailwindcss/typography": "^0.5.9",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@videosdk.live/react-sdk": "^0.1.74",
+    "@windmill/react-ui": "^0.6.0",
+    "antd": "^5.6.4",
+    "axios": "^1.4.0",
+    "chart.js": "^4.3.0",
+    "highcharts": "^11.1.0",
+    "hls.js": "^1.4.9-0.canary.9330",
+    "immutable": "^5.0.0-beta.4",
+    "js-cookie": "^3.0.5",
+    "lottie-react": "^2.4.0",
+    "query-string": "^8.1.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-cookie": "^6.1.1",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.49.2",
+    "react-player": "^2.12.0",
+    "react-redux": "^8.1.1",
+    "react-responsive": "^9.0.2",
+    "react-router-dom": "^6.14.1",
+    "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
+    "react-toastify": "^9.1.3",
+    "redux": "^4.2.1",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.2",
+    "slick-carousel": "^1.8.1",
+    "socket.io-client": "^4.7.2",
+    "styled-components": "^6.0.2",
+    "web-vitals": "^2.1.4",
+    "zod": "^3.22.4"
+  },
+  "scripts": {
+    "start": "WATCHPACK_POLLING=true react-app-rewired start",
+    "startlocal": "react-app-rewired start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.4.0-alpha.2",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "react-app-rewired": "^2.0.0",
+    "tailwindcss": "^3.3.3"
+  }
+}
