@@ -1,35 +1,35 @@
 services:
 
-  admin-app:
-    container_name: admin-app
-    build:
-      context: admin-app
-      dockerfile: Dockerfile
-    image: admin-app:latest
-    ports:
-      - '3000:3000'
-  customer-app:
-    container_name: customer-app
-    image: customer-app:latest
-    build:
-      context: customer-app
-      dockerfile: Dockerfile
-    ports:
-      - '3001:3001'
+  # admin-app:
+  #   container_name: admin-app
+  #   build:
+  #     context: admin-app
+  #     dockerfile: Dockerfile
+  #   image: admin-app:latest
+  #   ports:
+  #     - '3000:3000'
+  # customer-app:
+  #   container_name: customer-app
+  #   image: customer-app:latest
+  #   build:
+  #     context: customer-app
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - '3001:3001'
   
-  back-end:
-    container_name: back-end
-    image: back-end:latest
-    build:
-      context: admin-app
-      dockerfile: Dockerfile
-    ports:
-      - '8999:8999'
-    environment:
-      - 'MYSQL_DATABASE=clothingStore'
-      # - 'MYSQL_PASSWORD=161200'
-      - 'MYSQL_ROOT_PASSWORD=161200'
-      - 'MYSQL_USER=hoangthh1612'
+  # back-end:
+  #   container_name: back-end
+  #   image: back-end:latest
+  #   build:
+  #     context: admin-app
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - '8999:8999'
+  #   environment:
+  #     - 'MYSQL_DATABASE=clothingStore'
+  #     # - 'MYSQL_PASSWORD=161200'
+  #     - 'MYSQL_ROOT_PASSWORD=161200'
+  #     - 'MYSQL_USER=hoangthh1612'
   mysql:
     container_name: mysql
     image: 'mysql:latest'
@@ -42,5 +42,15 @@ services:
       - '3306:3306'
     volumes:
       - mysql_data:/var/lib/mysql
+  redis:
+    image: bitnami/redis:latest
+    container_name: redis
+    ports:
+      - "16379:6379"
+    environment:
+#      - REDIS_PASSWORD=your_redis_password
+      - ALLOW_EMPTY_PASSWORD=yes
+#    volumes:
+#      - redis_data:/bitnami/redis/data
 volumes:
   mysql_data:

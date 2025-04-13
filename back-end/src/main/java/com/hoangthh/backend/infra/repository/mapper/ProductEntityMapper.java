@@ -41,7 +41,6 @@ public class ProductEntityMapper {
                 if (!alreadyExists) {
                     attribute.getAttributeValues().add(av);
                 }
-
             }
         }
         List<Attribute> attributes = new ArrayList<>(attributeMap.values());

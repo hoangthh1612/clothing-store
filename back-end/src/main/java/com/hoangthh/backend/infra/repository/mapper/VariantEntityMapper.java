@@ -27,6 +27,7 @@ public class VariantEntityMapper {
                 .attributeValue(AttributeValueCore.builder().id(variantAttribute.getAttributeValue().getId())
                         .valueName(variantAttribute.getAttributeValue().getValueName())
                         .attributeId(variantAttribute.getAttributeValue().getAttribute().getId())
+                        .attributeName(variantAttribute.getAttributeValue().getAttribute().getAttributeName())
                         .build())
                 .build();
     }

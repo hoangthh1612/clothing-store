@@ -16,6 +16,12 @@ spring:
 ##        dialect: org.hibernate.dialect.MySQL57InnoDBDialect
     show-sql: true
     database-platform: org.hibernate.dialect.MySQL8Dialect
+  data:
+    redis:
+      host: localhost
+      port: 16379
+  cache:
+    type: redis
 jwt:
   secret: "5367566B59703373367639792F423F4528482B4D6251655468576D5A7134743"
   expiration: "7200000"
